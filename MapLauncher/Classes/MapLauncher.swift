@@ -74,6 +74,8 @@ private struct Navigator {
 
 public class MapLauncher {
 
+    private var actionSheetTitle: String?
+    private var actionSheetMessage: String?
     private var cancelAtionTitle: String?
 
     public init() {}
@@ -82,15 +84,25 @@ public class MapLauncher {
     /// - Parameters:
     ///   - destination: desired destination coordinates
     ///   - controller: host UIViewController for an ActionSheet
-    ///   - cancelAtionTitle: cancel action title, default value - "Cancel"
-    public func present(destination: CLLocationCoordinate2D, on controller: UIViewController, cancelAtionTitle: String = "Cancel") {
+    ///   - actionSheetTitle: ActionSheet title, default value - nil
+    ///   - actionSheetMessage: ActionSheet message, default value - nil
+    ///   - cancelAtionTitle: ActionSheet cancel action title, default value - "Cancel"
+    public func present(destination: CLLocationCoordinate2D,
+                        on controller: UIViewController,
+                        actionSheetTitle: String? = nil,
+                        actionSheetMessage: String? = nil,
+                        cancelAtionTitle: String = "Cancel") {
+        self.actionSheetTitle = actionSheetTitle
+        self.actionSheetMessage = actionSheetMessage
         self.cancelAtionTitle = cancelAtionTitle
         present(actionSheetController: buildActionSheet(for: destination), on: controller)
     }
 
     private func buildActionSheet(for destination: CLLocationCoordinate2D) -> UIAlertController {
 
-        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let actionSheetController = UIAlertController(title: actionSheetTitle,
+                                                      message: actionSheetMessage,
+                                                      preferredStyle: .actionSheet)
 
         // Add avalible navigation actions
         Navigator(destination: destination).availableNavigatorTypes.forEach {

@@ -28,7 +28,11 @@ class ViewController: UIViewController {
         let placeLocation = CLLocationCoordinate2D(latitude: 50.4536, longitude: 30.5164)
 
         // Presenting navigation apps ActionSheet
-        MapLauncher().present(destination: placeLocation, on: self)
+        MapLauncher().present(destination: placeLocation,
+                              on: self,
+                              actionSheetTitle: "Route to Kyiv",
+                              actionSheetMessage: "Please choose one of the available apps to start navigation",
+                              cancelAtionTitle: "Dismiss")
     }
 
 }
