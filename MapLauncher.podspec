@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MapLauncher'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Swift library that helps to build a route with external navigation apps'
   s.description      = 'Swift library that helps to build a route with external navigation apps. For now, supporting: Apple Maps, Google Maps, Waze and Yandex.'
   s.homepage         = 'https://github.com/cropio/MapLauncher'
