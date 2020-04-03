@@ -27,7 +27,7 @@ pod 'MapLauncher'
 
 Add to your project `Info.plist` next key-value pair:
 
-```
+```xml
 ...
 <key>LSApplicationQueriesSchemes</key>
 	<array>
@@ -41,12 +41,14 @@ Add to your project `Info.plist` next key-value pair:
 
 In a place where you are going to implement the functionality you need to import the library:
 
-`import MapLauncher`
+```swift
+import MapLauncher
+```
 
 
 And call ActionSheet next way:
 
-```
+```swift
 ...
 // Desired destination coordinates
 let placeLocation = CLLocationCoordinate2D(latitude: 50.4536, longitude: 30.5164)
