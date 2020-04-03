@@ -25,15 +25,35 @@ pod 'MapLauncher'
 
 ## Usage 
 
-`import MapLauncher`
+Add to your project `Info.plist` next key-value pair:
 
+```
+...
+<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>waze</string>
+		<string>comgooglemaps</string>
+		<string>yandexnavi</string>
+		<string>mapsme</string>
+	</array>
 ...
 ```
+
+In a place where you are going to implement the functionality you need to import the library:
+
+`import MapLauncher`
+
+
+And call ActionSheet next way:
+
+```
+...
 // Desired destination coordinates
 let placeLocation = CLLocationCoordinate2D(latitude: 50.4536, longitude: 30.5164)
 
 // Presenting navigation apps ActionSheet
 MapLauncher().present(destination: placeLocation, on: self)
+...
 ```
 
 
