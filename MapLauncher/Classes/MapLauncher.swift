@@ -3,7 +3,6 @@
 //  MapLauncherDemo
 //
 //  Created by Dmytro Romanov on 02.04.2020.
-//  Copyright © 2020 Cropio. All rights reserved.
 //
 
 import UIKit
