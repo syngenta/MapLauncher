@@ -3,7 +3,6 @@
 //  MapLauncher
 //
 //  Created by Dmitriy Romanov on 04/02/2020.
-//  Copyright (c) 2020 Dmitriy Romanov. All rights reserved.
 //
 
 import UIKit
