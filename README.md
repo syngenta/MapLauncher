@@ -4,7 +4,7 @@ The library allows in the simplest way to add "Route to `any location`" function
 
 For now, supporting: **Apple Maps**, **Google Maps**, **Waze** and **Yandex**.
 
-![Map Launcher example screenshot](https://github.com/syngenta/MapLauncher/MAPLExample/MAPLExample.jpg?raw=true)
+![Map Launcher example screenshot](/MAPLExample/MAPLExample.jpg)
 
 ## Example
 
@@ -61,10 +61,12 @@ MapLauncher().present(destination: placeLocation, on: self)
 
 // or 
 
-MapLauncher().present(destination: placeLocation, 
-						on: self,
-                        actionSheetTitle: "Build a route using:",
-                        actionSheetMessage: "(you will be redirected to the selected app)")
+MapLauncher().present(
+	destination: placeLocation, 
+	on: self,
+    actionSheetTitle: "Build a route using:",
+    actionSheetMessage: "(you will be redirected to the selected app)"
+)
 ...
 ```
 
