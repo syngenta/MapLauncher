@@ -4,7 +4,7 @@ The library allows in the simplest way to add "Route to `any location`" function
 
 For now, supporting: **Apple Maps**, **Google Maps**, **Waze** and **Yandex**.
 
-<img src='/MAPLExample/MAPLExample.jpg' width='100'>
+<img src='/MAPLExample/MAPLExample.jpg' width='400'>
 
 ## Example
 
