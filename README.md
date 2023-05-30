@@ -1,20 +1,23 @@
 # MapLauncher
 
-[![Version](https://img.shields.io/cocoapods/v/MapLauncher.svg?style=flat)](https://cocoapods.org/pods/MapLauncher)
-[![License](https://img.shields.io/cocoapods/l/MapLauncher.svg?style=flat)](https://cocoapods.org/pods/MapLauncher)
-[![Platform](https://img.shields.io/cocoapods/p/MapLauncher.svg?style=flat)](https://cocoapods.org/pods/MapLauncher)
-
 The library allows in the simplest way to add "Route to `any location`" functionality to your app. By calling the only one method the library attempt to present an ActionSheet with all supported and installed navigation app on the device.
 
-For now, supporting: Apple Maps, Google Maps, Waze and Yandex.
+For now, supporting: **Apple Maps**, **Google Maps**, **Waze** and **Yandex**.
 
+<img src='/MAPLExample/MAPLExample.jpg' width='400'>
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
+To play with usage example navigate to MAPLExample folder and look at MAPLExample.xcodeproj 
 
 ## Installation
+
+### Swift Package Manager
+
+- File > Swift Packages > Add Package Dependency
+- Add `https://github.com/syngenta/MapLauncher.git`
+
+### CocoaPods **(Depricated, latest avalible version 0.1.1)**
 
 MapLauncher is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -22,6 +25,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'MapLauncher'
 ```
+
 
 ## Usage 
 
@@ -34,7 +38,6 @@ Add to your project `Info.plist` next key-value pair:
 		<string>waze</string>
 		<string>comgooglemaps</string>
 		<string>yandexnavi</string>
-		<string>mapsme</string>
 	</array>
 ...
 ```
@@ -55,13 +58,22 @@ let placeLocation = CLLocationCoordinate2D(latitude: 50.4536, longitude: 30.5164
 
 // Presenting navigation apps ActionSheet
 MapLauncher().present(destination: placeLocation, on: self)
+
+// or 
+
+MapLauncher().present(
+	destination: placeLocation, 
+	on: self,
+    actionSheetTitle: "Build a route using:",
+    actionSheetMessage: "(you will be redirected to the selected app)"
+)
 ...
 ```
 
 
 ## Author
 
-Dmitriy Romanov, dimkahr@gmail.com
+Dmytro Romanov, dimkahr@gmail.com
 
 ## License
 
